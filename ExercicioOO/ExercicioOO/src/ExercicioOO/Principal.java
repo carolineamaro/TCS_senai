@@ -26,6 +26,10 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         int opcao = scanner.nextInt();
 
+        Moto moto = new Moto(3000f, false);
+        Carro carro = new Carro(10000f, false);
+        Caminhao caminhao = new Caminhao(5000f, false);
+
         do {
             switch (opcao) {
                 case 1:
@@ -43,32 +47,28 @@ public class Principal {
                     Scanner scanner2 = new Scanner(System.in);
                     int opcao2 = scanner.nextInt();
 
+                    //Moto moto = new Moto(3000f, false);
+
                     do {
                         switch (opcao2) {
                             case 1:
-                                Moto moto1 = new Moto(7500f, false);
-                                moto1.ligado();
+                                moto.ligado();
                                 break;
                             case 2:
-                                Moto moto2 = new Moto(7500f, false);
-                                moto2.desligado();
+                                moto.desligado();
                                 break;
                             case 3:
-                                Moto moto3 = new Moto(7500f, false);
-                                moto3.abastecer();
+                                moto.abastecer();
                                 break;
                             case 4:
-                                Moto moto4 = new Moto(7500f, false);
-                                moto4.acelerar();
+                                moto.acelerar();
                                 break;
                             case 5:
-                                Moto moto5 = new Moto(7500f, false);
-                                moto5.trocarPneu();
+                                moto.trocarPneu();
                                 break;
                             case 6:
-                                Moto moto6 = new Moto(7500f, false);
                                 //moto6.trocarPneu();
-                                moto6.mostrarStatus();
+                                moto.mostrarStatus();
                                 break;
                             case 7:
                                 System.out.println("Ate logo !!");
@@ -93,32 +93,26 @@ public class Principal {
                     Scanner scanner3 = new Scanner(System.in);
                     int opcao3 = scanner.nextInt();
 
+                    //Carro carro = new Carro(10000f, false);
                     do {
                         switch (opcao3) {
                             case 1:
-                                Carro carro1 = new Carro(15000f, false);
-                                carro1.ligado();
+                                carro.ligado();
                                 break;
                             case 2:
-                                Carro carro2 = new Carro(15000f, false);
-                                carro2.desligado();
+                                carro.desligado();
                                 break;
                             case 3:
-                                Carro carro3 = new Carro(15000f, false);
-                                carro3.abastecer();
+                                carro.abastecer();
                                 break;
                             case 4:
-                                Carro carro4 = new Carro(15000f, false);
-                                carro4.acelerar();
+                                carro.acelerar();
                                 break;
                             case 5:
-                                Carro carro5 = new Carro(15000f, false);
-                                carro5.trocarPneu();
+                                carro.trocarPneu();
                                 break;
                             case 6:
-                                Carro carro6 = new Carro(15000f, false);
-                                carro6.trocarPneu();
-                                carro6.mostrarStatus();
+                                carro.mostrarStatus();
                                 break;
                             case 7:
                                 System.out.println("Ate logo !!");
@@ -143,32 +137,27 @@ public class Principal {
                     Scanner scanner4 = new Scanner(System.in);
                     int opcao4 = scanner.nextInt();
 
+                    //Caminhao caminhao = new Caminhao(5000f, false);
+
                     do {
                         switch (opcao4) {
                             case 1:
-                                Caminhao caminhao1 = new Caminhao(100000f, false);
-                                caminhao1.ligado();
+                                caminhao.ligado();
                                 break;
                             case 2:
-                                Caminhao caminhao2 = new Caminhao(100000f, false);
-                                caminhao2.desligado();
+                                caminhao.desligado();
                                 break;
                             case 3:
-                                Caminhao caminhao3 = new Caminhao(100000f, false);
-                                caminhao3.abastecer();
+                                caminhao.abastecer();
                                 break;
                             case 4:
-                                Caminhao caminhao4 = new Caminhao(100000f, false);
-                                caminhao4.acelerar();
+                                caminhao.acelerar();
                                 break;
                             case 5:
-                                Caminhao caminhao5 = new Caminhao(100000f, false);
-                                caminhao5.trocarPneu();
+                                caminhao.trocarPneu();
                                 break;
                             case 6:
-                                Caminhao caminhao6 = new Caminhao(100000f, false);
-                                caminhao6.trocarPneu();
-                                caminhao6.mostrarStatus();
+                                caminhao.mostrarStatus();
                                 break;
                             case 7:
                                 System.out.println("Ate logo !!");

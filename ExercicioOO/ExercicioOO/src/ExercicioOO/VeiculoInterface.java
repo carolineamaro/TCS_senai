@@ -10,10 +10,10 @@ package ExercicioOO;
  * @author aluno
  */
 public interface VeiculoInterface {
-    void ligado();
-    void desligado();
+    //void ligado();
+    //void desligado();
     void abastecer();
-    void acelerar();
-    void trocarPneu();
+    //void acelerar();
+    //void trocarPneu();
     void mostrarStatus();
 }
