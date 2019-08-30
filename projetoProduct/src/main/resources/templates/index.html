@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Home</a>
+        <!-- <a class="navbar-brand" href="/products/novo">Criar Novo</a> -->
+      </div>
+    </div>
+  </nav>
+
+
+	<div class="container">
+		<div th:switch="${products}" class="container my-5">
+			<p class="my-5">
+				<a href="novo" class="btn btn-primary">Add Product</a>
+			</p>
+			<!--  <div class="col-md-10">
+				<h2 th:case="null">Sem Produtos!</h2>-->
+
+				<div th:case="*">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Nome</th>
+								<th>Brand</th>
+								<th>Made in</th>
+                    			<th>Price</th>
+								<th>Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="product : ${listProducts}">
+								<td th:text="${product.id}"></td>
+								<td th:text="${product.nome}"></td>
+								<td th:text="${product.brand}"></td>
+								<td th:text="${product.madein}"></td>
+                    			<td th:text="${product.price}"></td>
+								<td>
+								<!-- href="@{'/edit/' + ${product.id}}" -->
+								<a th:href="@{'/edit/' + ${product.id}}"
+									class="btn btn-primary">Editar</a>
+								<a th:href="@{'/delete/' + ${product.id}}"
+									class="btn btn-danger">Excluir</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+		    </div>
+	    </div>
+  
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">         </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+  
+</body>
+</html>
